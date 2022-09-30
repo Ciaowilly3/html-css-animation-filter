@@ -64,20 +64,88 @@
     height: 30px;
 }
 
-.ex-6-img, .ex-7-img, .ex-8-img {
+.ex-6-img {
     width: 500px;
+}
+
+.ex-6-img:hover{
+    filter: grayscale(1);
+}
+
+.ex-7-img, .ex-8-img {
+    width: 500px;
+
+    transition: filter 2s, border-radius 2s;
+}
+
+.ex-7-img:hover{
+    filter: blur(1px);
+    filter: contrast(10);
+}
+
+.ex-8-img:hover{
+    filter: brightness(50%);
+    filter: opacity(50%);
+    border-radius: 50px;
 }
 
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+
+    transition: filter 2s, border-radius 2s, transform 2s;
 }
+
+.ex-9-img:hover{
+    filter: brightness(50%);
+    filter: opacity(50%);
+    border-radius: 50px;
+    transform: scale(1.5);
+
+}
+
 .ex-10-icon {
     font-size: 60px;
+
+    
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin{
+0%{
+    transform: rotate(0deg);
+    }
+100%{
+    transform:rotate(360deg);
+}
+
 }
 .ex-11-icon {
     font-size: 60px;
 }
+
+.ex-11-icon:hover {
+    animation-name: spinless;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spinless{
+0%{
+     transform: rotate(0deg);
+}
+80%{
+    transform:rotate(273.15deg);
+}
+100%{
+    transform: rotate(0deg);
+}
+}   
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -107,3 +175,81 @@
     width: 60px;
     height: 20px;
 }
+
+.ex-12-top-white{
+    animation-name: movement;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes movement{
+0%,100%{
+    top: -10px;
+    left: 10%;
+}
+50%{
+    top: -10px;
+    left: 40%;
+}
+}
+
+.ex-13-top-white{
+    animation-name: circletop;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+} 
+
+.ex-13-bottom-white{
+    animation-name: circlebottom;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes circletop{
+0%{
+    top: -10px;
+    left: 10%;
+}
+25%{
+    top: -10px;
+    left: 140px;
+}
+50%{
+    top: 100%;
+    left: 140px;
+}
+75%{
+    top: 100%;
+    left: -20px;
+}
+90%{
+    top: -10px;
+    left: -10px;
+}
+}
+
+@keyframes circlebottom{
+    0%,100%{
+        bottom: -10px;
+        right: 20%;
+    }
+    25%{
+        bottom: -10px;
+        right: 140px;
+    }
+    50%{
+        bottom: 100%;
+        right: 140px;
+    }
+    75%{
+      bottom: 100%;
+      right:-20px;
+    }
+    90%{
+        bottom: -10px;
+        right: -20px;
+    }
+    }
