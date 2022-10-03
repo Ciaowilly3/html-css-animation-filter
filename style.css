@@ -79,13 +79,11 @@
 }
 
 .ex-7-img:hover{
-    filter: blur(1px);
-    filter: contrast(10);
+    filter: blur(1px)contrast(10);
 }
 
 .ex-8-img:hover{
-    filter: brightness(50%);
-    filter: opacity(50%);
+    filter: brightness(50%)opacity(50%);
     border-radius: 50px;
 }
 
@@ -97,8 +95,7 @@
 }
 
 .ex-9-img:hover{
-    filter: brightness(50%);
-    filter: opacity(50%);
+    filter: brightness(50%)opacity(50%);
     border-radius: 50px;
     transform: scale(1.5);
 
